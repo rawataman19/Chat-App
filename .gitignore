@@ -1,0 +1,14 @@
+# .gitignore
+
+# Node
+node_modules/
+.env
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# VSCode settings
+.vscode/

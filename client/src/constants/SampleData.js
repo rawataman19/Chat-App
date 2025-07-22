@@ -22,7 +22,10 @@ export const sampleChats=[{
     index: 1,
   },
 {
-    avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
+    avatar: ["https://www.w3schools.com/howto/img_avatar.png",
+      "https://www.w3schools.com/howto/img_avatar2.png",
+
+    ],
     name: "Group Chat",
     _id: "11223",
     groupChat: true,
@@ -33,3 +36,16 @@ export const sampleChats=[{
     index: 2,
   }    
 ]
+
+export const sampleUsers =[
+  {
+    avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
+    name: "Jane Smith",
+    _id: "67890",
+  }
+  {
+     avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
+    name: "Jane Smith",
+    _id: "67890",
+  }
+];

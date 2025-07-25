@@ -5,16 +5,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import UserItem from '../shared/UserItem';
 import {  sampleUsers } from '../../constants/SampleData';
 
-
-
 const Search = () => {
-
   const search = useInputValidation("");
   const addFriendHandler = (id)=>{
       console.log(id)
   }
-  const [users,setUsers]= useState(sampleUsers);
-
+  const [users] = useState(sampleUsers);
   let isLoadingSendFriendRequest=false;
 
   return (
@@ -22,7 +18,6 @@ const Search = () => {
       <Stack p={"2rem"} direction={"column"} width={"25rem"}>
         <Typography textAlign="center" variant="h6" mb={2}>Find People</Typography>
         <TextField
-          // label="/"
           value={search.value}
           onChange={search.changeHandler}
           variant="outlined"
@@ -32,7 +27,6 @@ const Search = () => {
               <InputAdornment position='start'>
                 <SearchIcon/>
               </InputAdornment>
-             
             ),
           }}
         />

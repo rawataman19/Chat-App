@@ -1,8 +1,8 @@
 import { Avatar, IconButton, ListItem, Typography, Stack } from '@mui/material';
 import React, { memo } from 'react';
-import AddIcon from '@mui/icons-material/Add';
+import {Add as AddIcon, Remove as RemoveIcon  } from '@mui/icons-material';
 
-const UserItem = ({ user, handler, handleIsLoading }) => {
+const UserItem = ({ user, handler, handleIsLoading , isAdded=false}) => {
   const { name, _id, avatar } = user;
   return (
     <ListItem>
@@ -12,7 +12,7 @@ const UserItem = ({ user, handler, handleIsLoading }) => {
         spacing={1}
         width="100%"
       >
-        <Avatar src={avatar} />
+        <Avatar src={Array.isArray(avatar) ? avatar[0] : avatar} />
         <Typography
           sx={{
             flexGrow: 1,
@@ -25,8 +25,16 @@ const UserItem = ({ user, handler, handleIsLoading }) => {
         >
           {name}
         </Typography>
-        <IconButton onClick={() => handler(_id)} disabled={handleIsLoading}>
-          <AddIcon />
+        <IconButton
+          sx={{bgcolor: isAdded? 'error.main' : 'primary.main',
+            color: 'white',
+            cursor: handleIsLoading? 'not-allowed' : 'pointer',
+            "&:hover": {bgcolor: isAdded ? 'error.dark' : 'primary.dark'},
+            }  
+          }
+            
+          onClick={() => handler(_id)} disabled={handleIsLoading}>
+          {isAdded?  <RemoveIcon/>   : <AddIcon />   }
         </IconButton>
       </Stack>
     </ListItem>

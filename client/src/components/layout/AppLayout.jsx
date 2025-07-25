@@ -11,7 +11,7 @@ const AppLayout = () => (WrappedComponent) => {
   return (props) => {
 
     const params= useParams();
-    const chatId = params.chatId;
+    const chatId = params.ChatId;
     const hanldeDeleteChat = (e, chatId, groupChat) => {
       e.preventDefault();
       // Logic to handle chat deletion

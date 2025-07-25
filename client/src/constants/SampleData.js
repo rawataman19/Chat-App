@@ -41,11 +41,29 @@ export const sampleUsers =[
   {
     avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
     name: "Jane Smith",
-    _id: "67890",
+    _id: "1",
   }
+  ,
   {
      avatar: ["https://www.w3schools.com/howto/img_avatar.png"],
     name: "Jane Smith",
-    _id: "67890",
+    _id: "2",
   }
+];
+
+export const sampleNotifications = [
+  {
+    sender: {
+      avatar: "https://www.w3schools.com/howto/img_avatar.png", // not an array
+      name: "Jane Smith",
+    },
+    _id: "67890",
+  },
+  {
+    sender: {
+      avatar: "https://www.w3schools.com/howto/img_avatar.png",
+      name: "Jane Smith",
+    },
+    _id: "12345",
+  },
 ];

@@ -74,8 +74,8 @@ const Login = () => {
 
                 />
                 {
-                 userPasswordValidator.errorMessage && <Typography color="error" 
-                  variant="caption">{userPasswordValidator.errorMessage}
+                  password.error && <Typography color="error" 
+                  variant="caption">{password.error}
                   </Typography>
                 }
 

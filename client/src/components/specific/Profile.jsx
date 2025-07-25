@@ -33,7 +33,7 @@ const Profile = () => {
   )
 }
 const ProfileCard= ({text, Icon,heading}) => (
-  <Stack direction={"row"} textAlign={"center"} alginItems={"center"} spacing={2} sx={{width: "100%", padding: "1rem", borderRadius: "8px" ,color: "white"}}>
+  <Stack direction={"row"} textAlign={"center"} alignItems={"center"} spacing={2} sx={{width: "100%", padding: "1rem", borderRadius: "8px" ,color: "white"}}>
       {Icon && Icon}
       <Stack>
         <Typography variant='body1' textAlign={"center"}>{text}</Typography>
